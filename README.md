@@ -13,4 +13,4 @@ This project uses linear regression to predict house prices based on various fea
 3. Open the Jupyter notebook in `notebooks/`.
 
 ## Results : is in progress but expecting the following 👇🏻
-The model achieved an RMSE of X and an R^2 score of Y.
+our model achieved an RMSE of X and an R^2 score of Y.
