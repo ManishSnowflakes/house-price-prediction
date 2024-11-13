@@ -12,6 +12,5 @@ This project uses linear regression to predict house prices based on various fea
 2. Install the required libraries and activate the virtual environment.
 3. Open the Jupyter notebook in `notebooks/`.
 
-## Results :
-is in progress but expecting the following 👇🏻
+## Results : is in progress but expecting the following 👇🏻
 The model achieved an RMSE of X and an R^2 score of Y.
