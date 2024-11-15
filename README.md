@@ -110,6 +110,7 @@ The project includes a Flask API for serving predictions and is containerized us
 ### **Folder Structure**
 
 house-price-prediction/
+app.py                        # Flask API for predictions
 notebooks/
 house_price_prediction.ipynb  # Jupyter Notebook for EDA and model development
 
@@ -117,7 +118,6 @@ data/
 house_prices.csv              # Cleaned dataset
 
 src/
-app.py                        # Flask API for predictions
 house_price_predictor.pkl     # Trained Gradient Boosting Model
 scaler.pkl                    # Standard Scaler object
 
