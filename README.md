@@ -20,7 +20,9 @@ By analyzing and comparing multiple models, optimizing hyperparameters, and depl
 We used the dataset available at [Kaggle: Real Estate Data from 7 Indian Cities](https://www.kaggle.com/datasets/rakkesharv/real-estate-data-from-7-indian-cities?select=Real+Estate+Data+V21.csv). 
 
 ### **Dataset Details**
-- **File Name**: `house_prices.csv`
+- **File Name**: `house_prices.csv`, Total 10.4mb dataset. for training and testing i have used 80/20 rule.
+- Training set size: 11369
+- Testing set size: 2843
 - **Features**:
   - `Total Area`: The area of the property in square feet.
   - `Price per Square Foot`: The cost of the property per square foot.
@@ -108,20 +110,20 @@ The project includes a Flask API for serving predictions and is containerized us
 ### **Folder Structure**
 
 house-price-prediction/
-├── notebooks/
-│   ├── house_price_prediction.ipynb  # Jupyter Notebook for EDA and model development
-│
-├── data/
-│   ├── house_prices.csv              # Cleaned dataset
-│
-├── src/
-│   ├── app.py                        # Flask API for predictions
-│   ├── house_price_predictor.pkl     # Trained Gradient Boosting Model
-│   ├── scaler.pkl                    # Standard Scaler object
-│
-├── requirements.txt                  # Python dependencies
-├── Dockerfile                        # Docker configuration
-├── README.md                         # Project documentation
+notebooks/
+house_price_prediction.ipynb  # Jupyter Notebook for EDA and model development
+
+data/
+house_prices.csv              # Cleaned dataset
+
+src/
+app.py                        # Flask API for predictions
+house_price_predictor.pkl     # Trained Gradient Boosting Model
+scaler.pkl                    # Standard Scaler object
+
+requirements.txt                  # Python dependencies
+Dockerfile                        # Docker configuration
+README.md                         # Project documentation
 
 ### **Steps to Run Locally**
 1. Clone the repository:
