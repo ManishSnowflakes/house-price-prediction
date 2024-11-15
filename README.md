@@ -1,4 +1,4 @@
-# house-price-prediction
+# house-price-prediction-model
 
 This project uses linear regression to predict house prices based on various features. The dataset is from Kaggle’s House Prices competition.
 
