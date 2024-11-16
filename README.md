@@ -108,7 +108,7 @@ We evaluated four models to identify the best fit for predicting house prices.
 The project includes a Flask API for serving predictions and is containerized using Docker for scalability.
 
 ### **Folder Structure**
-
+   ```bash
 house-price-prediction/
 │
 ├── app.py                        # Flask API for predictions
@@ -126,7 +126,7 @@ house-price-prediction/
 ├── Dockerfile                        # Docker configuration
 ├── k8s_deployment.yaml               # Kubernetes deployment configuration
 ├── README.md                         # Project documentation
-
+```
 
 ### **Steps to Run Locally**
 1. Clone the repository:
