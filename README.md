@@ -2,9 +2,9 @@
 
 ## **Overview**
 
-I built the **House Price Prediction Model**, a machine learning project aimed at accurately predicting house prices based on essential real estate features with real-world data. Leveraging advanced regression techniques and a dataset from 7 Indian cities, this project demonstrates end-to-end implementation, from data preprocessing to deployment using Flask, Docker, and Kubernetes.
+I built the **House Price Prediction Model** machine learning project aimed at accurately predicting house prices based on essential real estate features with real-world data. Leveraging advanced regression techniques and a dataset from 7 Indian cities, this project demonstrates end-to-end implementation, from data preprocessing to deployment using Flask and Docker.
 
-By analyzing and comparing multiple models, optimizing hyperparameters, and deploying the best-performing model, this project provides practical insights into building and deploying machine learning models in the real estate domain with real-world datasets.
+By analyzing and comparing multiple models, optimizing hyperparameters, and deploying the best-performing model, this project provides me the practical insights into building and deploying machine learning models in the real estate domain with a real-world dataset.
 
 ---
 
@@ -13,7 +13,6 @@ By analyzing and comparing multiple models, optimizing hyperparameters, and depl
 - **Dataset Insights**: Real-world real estate data, addressing outliers, skewness, and missing values.
 - **Model Evaluation**: Comparative analysis of regression algorithms.
 - **Deployment Ready**: Flask API integrated with Docker for real-world use cases.
-- **Kubernetes Deployment**: Scalable and cloud-ready deployment for handling production-level traffic.
 
 ---
 
@@ -21,9 +20,9 @@ By analyzing and comparing multiple models, optimizing hyperparameters, and depl
 We used the dataset available at [Kaggle: Real Estate Data from 7 Indian Cities](https://www.kaggle.com/datasets/rakkesharv/real-estate-data-from-7-indian-cities?select=Real+Estate+Data+V21.csv). 
 
 ### **Dataset Details**
-- **File Name**: `house_prices.csv`, Total 10.4mb dataset. For training and testing, I have used the 80/20 rule.
-- **Training Set Size**: 11,369
-- **Testing Set Size**: 2,843
+- **File Name**: `house_prices.csv`, Total 10.4MB dataset. For training and testing, I have used the 80/20 rule.
+- Training set size: 11,369
+- Testing set size: 2,843
 - **Features**:
   - `Total Area`: The area of the property in square feet.
   - `Price per Square Foot`: The cost of the property per square foot.
@@ -98,8 +97,6 @@ We evaluated four models to identify the best fit for predicting house prices.
 2. **Deployment Decisions**:
    - Pickled the trained model (`house_price_predictor_model.pkl`) and the scaler (`scaler.pkl`) for efficient loading during predictions.
    - Chose Flask for a lightweight, fast API setup.
-   - Containerized the application using **Docker** to ensure portability and ease of deployment.
-   - Deployed the app using **Kubernetes** for scalability and high availability in cloud environments.
 
 3. **Possible Improvements**:
    - Incorporate location data and advanced feature engineering (e.g., distance to city center).
@@ -108,11 +105,10 @@ We evaluated four models to identify the best fit for predicting house prices.
 ---
 
 ## **Deployment**
-The project includes a Flask API for serving predictions and is containerized using **Docker** for scalability and ease of deployment. Additionally, the application is deployed in a **Kubernetes** cluster for high availability and fault tolerance.
+The project includes a Flask API for serving predictions and is containerized using Docker for scalability.
 
 ### **Folder Structure**
 
-```
 house-price-prediction/
 │
 ├── app.py                        # Flask API for predictions
@@ -130,7 +126,7 @@ house-price-prediction/
 ├── Dockerfile                        # Docker configuration
 ├── k8s_deployment.yaml               # Kubernetes deployment configuration
 ├── README.md                         # Project documentation
-```
+
 
 ### **Steps to Run Locally**
 1. Clone the repository:
@@ -149,19 +145,13 @@ house-price-prediction/
    python src/app.py
    ```
 
-4. **Build and Run Docker Image**:
+4. Build and Run Docker Image:
    ```bash
    docker build -t house-price-prediction .
    docker run -p 5000:5000 house-price-prediction
    ```
 
-5. **Deploy with Kubernetes**:
-   - Apply the Kubernetes deployment and service configurations:
-   ```bash
-   kubectl apply -f k8s_deployment.yaml
-   ```
-
-6. **Access the API** at `http://localhost:5005` or your cloud service's exposed IP if using a public cloud provider.
+5. Access the API at `http://localhost:5005`.
 
 ---
 
@@ -204,6 +194,51 @@ house-price-prediction/
    - Build a React or Angular-based frontend for user-friendly interactions.
 
 ---
+
+## **Skills Gained**
+
+This project has greatly enhanced my skills in various domains, including machine learning, data preprocessing, model deployment, and software engineering. Below are the key skills I have gained:
+
+### **1. Data Preprocessing and Feature Engineering**
+- **Data Cleaning**: Handling missing values, outliers, and inconsistencies using imputation techniques and transformations like log scaling.
+- **Feature Engineering**: Creating new features, identifying useful attributes, and removing irrelevant ones for optimal model performance.
+- **Normalization and Scaling**: Applying `StandardScaler` for consistent model input and handling skewed distributions.
+
+### **2. Machine Learning Algorithms**
+- **Regression Models**: Worked with multiple regression algorithms like **Linear Regression**, **Random Forest Regressor**, and **Gradient Boosting Regressor** to understand their strengths, weaknesses, and optimal use cases.
+- **Model Evaluation**: Gained expertise in evaluating models using metrics like **MAE**, **MSE**, and **RMSE** to assess prediction accuracy and efficiency.
+- **Hyperparameter Tuning**: Applied advanced techniques such as grid search and cross-validation to fine-tune model parameters and improve performance.
+
+### **3. Deployment and API Development**
+- **Flask**: Developed a lightweight **Flask API** to serve predictions, allowing users to interact with the model via HTTP requests.
+- **Docker**: Containerized the application using **Docker**, ensuring portability and scalability for deployment on cloud platforms.
+- **Pickling**: Mastered the process of saving machine learning models and scalers as pickle files for efficient loading and deployment.
+
+### **4. Cloud Deployment and Scalability**
+- **Containerization**: Gained hands-on experience with **Docker** to containerize applications, making them more portable and scalable.
+- **Cloud Deployment**: Developed the skill to deploy models to cloud platforms for high availability and scalability.
+
+### **5. Problem Solving and Optimization**
+- **Model Optimization**: Implemented gradient boosting optimization, focusing on balancing
+
+ performance with computational cost.
+- **Error Analysis**: Interpreted results of model evaluation metrics to improve model performance iteratively.
+
+### **6. Version Control and Collaboration**
+- **Git and GitHub**: Managed project versioning and collaborated efficiently with Git, ensuring proper version control during model development and experimentation.
+
+### **7. Project Management and Communication**
+- **Documentation**: Developed clear, concise project documentation and code comments, making the project accessible to collaborators and future users.
+- **End-to-End Pipeline Development**: Gained experience in building an end-to-end pipeline, from data ingestion and preprocessing to training, evaluation, and deployment.
+
+---
+
+## **Concluding Remarks**
+The House Price Prediction Model project has been a major learning opportunity. It helped me solidify my understanding of key machine learning principles and best practices, while also giving me hands-on experience with full-stack machine learning development, from preprocessing to deployment.
+
+---
+
+This updated README file provides a deep insight into the skills you've gained throughout the project, demonstrating your hard work and knowledge acquisition in data science, machine learning, and deployment practices.
 
 ## **Acknowledgements**
 I thank [Kaggle](https://www.kaggle.com/) for providing the dataset and the open-source community for supporting development tools.
