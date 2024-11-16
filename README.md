@@ -1,7 +1,3 @@
-Here is the updated version of your GitHub README file, incorporating Docker and Kubernetes deployment details:
-
----
-
 # **House Price Prediction Model**
 
 ## **Overview**
@@ -215,5 +211,3 @@ I thank [Kaggle](https://www.kaggle.com/) for providing the dataset and the open
 **For inquiries and contributions, please contact [Manishsnowflakes@gmail.com] or raise a GitHub issue.**
 
 ---
-
-This README now includes details about Docker and Kubernetes deployment, ensuring clarity for users on how to set up, build, and deploy the application locally and in the cloud.
