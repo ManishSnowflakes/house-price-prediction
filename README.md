@@ -1,10 +1,14 @@
+Here is the updated version of your GitHub README file, incorporating Docker and Kubernetes deployment details:
+
+---
+
 # **House Price Prediction Model**
 
 ## **Overview**
 
-I build the **House Price Prediction Model** machine learning project aimed at accurately predicting house prices based on essential real estate features with real world data. Leveraging advanced regression techniques and a dataset from 7 Indian cities, this project demonstrates end-to-end implementation, from data preprocessing to deployment using Flask and Docker.
+I built the **House Price Prediction Model**, a machine learning project aimed at accurately predicting house prices based on essential real estate features with real-world data. Leveraging advanced regression techniques and a dataset from 7 Indian cities, this project demonstrates end-to-end implementation, from data preprocessing to deployment using Flask, Docker, and Kubernetes.
 
-By analyzing and comparing multiple models, optimizing hyperparameters, and deploying the best-performing model, this project provides me the practical insights into building and deploying machine learning models in the real estate domain with real world dataset.
+By analyzing and comparing multiple models, optimizing hyperparameters, and deploying the best-performing model, this project provides practical insights into building and deploying machine learning models in the real estate domain with real-world datasets.
 
 ---
 
@@ -13,6 +17,7 @@ By analyzing and comparing multiple models, optimizing hyperparameters, and depl
 - **Dataset Insights**: Real-world real estate data, addressing outliers, skewness, and missing values.
 - **Model Evaluation**: Comparative analysis of regression algorithms.
 - **Deployment Ready**: Flask API integrated with Docker for real-world use cases.
+- **Kubernetes Deployment**: Scalable and cloud-ready deployment for handling production-level traffic.
 
 ---
 
@@ -20,9 +25,9 @@ By analyzing and comparing multiple models, optimizing hyperparameters, and depl
 We used the dataset available at [Kaggle: Real Estate Data from 7 Indian Cities](https://www.kaggle.com/datasets/rakkesharv/real-estate-data-from-7-indian-cities?select=Real+Estate+Data+V21.csv). 
 
 ### **Dataset Details**
-- **File Name**: `house_prices.csv`, Total 10.4mb dataset. for training and testing i have used 80/20 rule.
-- Training set size: 11369
-- Testing set size: 2843
+- **File Name**: `house_prices.csv`, Total 10.4mb dataset. For training and testing, I have used the 80/20 rule.
+- **Training Set Size**: 11,369
+- **Testing Set Size**: 2,843
 - **Features**:
   - `Total Area`: The area of the property in square feet.
   - `Price per Square Foot`: The cost of the property per square foot.
@@ -97,6 +102,8 @@ We evaluated four models to identify the best fit for predicting house prices.
 2. **Deployment Decisions**:
    - Pickled the trained model (`house_price_predictor_model.pkl`) and the scaler (`scaler.pkl`) for efficient loading during predictions.
    - Chose Flask for a lightweight, fast API setup.
+   - Containerized the application using **Docker** to ensure portability and ease of deployment.
+   - Deployed the app using **Kubernetes** for scalability and high availability in cloud environments.
 
 3. **Possible Improvements**:
    - Incorporate location data and advanced feature engineering (e.g., distance to city center).
@@ -105,42 +112,60 @@ We evaluated four models to identify the best fit for predicting house prices.
 ---
 
 ## **Deployment**
-The project includes a Flask API for serving predictions and is containerized using Docker for scalability.
+The project includes a Flask API for serving predictions and is containerized using **Docker** for scalability and ease of deployment. Additionally, the application is deployed in a **Kubernetes** cluster for high availability and fault tolerance.
 
 ### **Folder Structure**
 
+```
 house-price-prediction/
-app.py                        # Flask API for predictions
-notebooks/
-house_price_prediction.ipynb  # Jupyter Notebook for EDA and model development
-
-data/
-house_prices.csv              # Cleaned dataset
-
-src/
-house_price_predictor.pkl     # Trained Gradient Boosting Model
-scaler.pkl                    # Standard Scaler object
-
-requirements.txt                  # Python dependencies
-Dockerfile                        # Docker configuration
-README.md                         # Project documentation
+│
+├── app.py                        # Flask API for predictions
+├── notebooks/
+│   └── house_price_prediction.ipynb  # Jupyter Notebook for EDA and model development
+│
+├── data/
+│   └── house_prices.csv              # Cleaned dataset
+│
+├── src/
+│   ├── house_price_predictor.pkl     # Trained Gradient Boosting Model
+│   └── scaler.pkl                    # Standard Scaler object
+│
+├── requirements.txt                  # Python dependencies
+├── Dockerfile                        # Docker configuration
+├── k8s_deployment.yaml               # Kubernetes deployment configuration
+├── README.md                         # Project documentation
+```
 
 ### **Steps to Run Locally**
 1. Clone the repository:
+   ```bash
    git clone https://github.com/ManishSnowflakes/house-price-prediction.git
    cd house-price-prediction
+   ```
 
 2. Install dependencies:
+   ```bash
    pip install -r requirements.txt
+   ```
 
 3. Start the Flask API:
+   ```bash
    python src/app.py
+   ```
 
-4. Build and Run Docker Image:
+4. **Build and Run Docker Image**:
+   ```bash
    docker build -t house-price-prediction .
    docker run -p 5000:5000 house-price-prediction
+   ```
 
-5. Access the API at `http://localhost:5005`.
+5. **Deploy with Kubernetes**:
+   - Apply the Kubernetes deployment and service configurations:
+   ```bash
+   kubectl apply -f k8s_deployment.yaml
+   ```
+
+6. **Access the API** at `http://localhost:5005` or your cloud service's exposed IP if using a public cloud provider.
 
 ---
 
@@ -190,3 +215,5 @@ I thank [Kaggle](https://www.kaggle.com/) for providing the dataset and the open
 **For inquiries and contributions, please contact [Manishsnowflakes@gmail.com] or raise a GitHub issue.**
 
 ---
+
+This README now includes details about Docker and Kubernetes deployment, ensuring clarity for users on how to set up, build, and deploy the application locally and in the cloud.
