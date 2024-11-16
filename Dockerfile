@@ -2,7 +2,7 @@ FROM python:3.10-slim
 
 # Set environment variables
 ENV FLASK_ENV=production
-ENV SECRET_KEY="***REMOVED***"
+ENV SECRET_KEY=" "
 
 # Set the working directory inside the container
 WORKDIR /app
