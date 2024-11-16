@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: house-price-prediction
+  namespace: house-price-namespace
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: house-price-prediction
+  template:
+    metadata:
+      labels:
+        app: house-price-prediction
+    spec:
+      containers:
+        - name: house-price-prediction
+          image: manishsnowflakes/house-price-prediction:latest
+          ports:
+            - containerPort: 5005
